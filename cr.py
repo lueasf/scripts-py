@@ -17,6 +17,12 @@ class User:
         return self.password == self._crypt_pwd(password)
 
 
+class Post:
+    def __init__(self, author, message):
+        self.author = author
+        self.message = message
+        self.date = datetime.datetime.now() # on récupère la date et l'heure actuelle
+
 ###
 # john = User()
 # john.id = 1
